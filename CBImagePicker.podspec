@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                            It is a utils for imagePicker.  
                    DESC
 
-  s.homepage     = "https://github.com/caobo56/CBBasicUtils.git"
+  s.homepage     = "https://github.com/caobo56/CBImagePicker"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/caobo56/CBBasicUtils.git", :tag => "0.9.95" }
+  s.source       = { :git => "https://github.com/caobo56/CBImagePicker.git", :tag => "0.9.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,49 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.default_subspec = 'Requset','MacroAndConstant','Util','BasicVC','BasicClass','Catergory'
-
-  s.subspec "MacroAndConstant" do |mc|
-    mc.source_files = 'src/MacroAndConstant/*.{h,m}'
-    mc.public_header_files = "src/MacroAndConstant/*.h"
-  end
-
-  s.subspec "Util" do |util|
-    util.source_files = 'src/Util/*.{h,m}'
-    util.public_header_files = "src/Util/*.h"
-    util.frameworks = 'UIKit','Foundation'
-    util.resources = 'src/Resource/*.plist'
-    util.frameworks = 'UIKit','Foundation','QuartzCore'
-  end
-
-  s.subspec "Catergory" do |ca|
-    ca.source_files = 'src/Catergory/*.{h,m}'
-    ca.public_header_files = "src/Catergory/*.h"
-    ca.frameworks = 'UIKit','Foundation','QuartzCore'
-  end
-
-  s.subspec "BasicVC" do |bv|
-    bv.source_files = 'src/BasicVC/*.{h,m}'
-    bv.public_header_files = "src/BasicVC/*.h"
-    bv.frameworks = 'UIKit','Foundation','MobileCoreServices'
-    bv.resources = 'src/BasicVC/*.xib'
-  end
-
-  s.subspec "BasicClass" do |bc|
-    bc.source_files = 'src/BasicClass/*.{h,m}'
-    bc.public_header_files = "src/BasicClass/*.h"
-    bc.frameworks = 'UIKit','Foundation'
-    bc.resources = 'src/BasicClass/*.xib'
-    bc.dependency 'Masonry'
-    # bc.dependency 'CBBasicUtils/MacroAndConstant'
-    # bc.dependency 'CBBasicUtils/Catergory'
-  end
-
-  s.subspec "Requset" do |re|
-    re.source_files = 'src/Requset/*.{h,m}'
-    re.public_header_files = "src/Requset/*.h"
-    re.frameworks = 'UIKit','Foundation'
-  end
+  s.source_files  = "src", "src/*.{h,m}"
 
   # s.public_header_files = "Classes/**/*.h"
 
