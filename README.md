@@ -53,3 +53,6 @@
  				@param comp 回调中有图片
  				*/
 				-(void)setPickerCompletion:(PickerCompletion)comp;
+				
+				
+				@end
