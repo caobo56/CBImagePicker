@@ -1,6 +1,8 @@
-# CBImagePicker 图片选择器
+# CBImagePicker 
+图片选择器
+可以选择相册，也可以直接拍照
 
-				# 使用方法：
+# 使用方法：
 				#import "ABImagePicker.h"
 
 				-(void)startPicker{
@@ -17,7 +19,7 @@
 				}
 
 
-				# 接口列表：
+# 接口列表：
 				/**
  				选择器的回调
 
