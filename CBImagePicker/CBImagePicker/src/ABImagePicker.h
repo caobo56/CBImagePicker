@@ -9,14 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-
+@class ABImagePicker;
 /**
  选择器的回调
 
  @param error error
  @param image 图片
  */
-typedef void(^PickerCompletion)(NSError* error,UIImage* image);
+typedef void(^PickerCompletion)(ABImagePicker * picker,NSError* error,UIImage* image);
 
 @interface ABImagePicker : NSObject
 

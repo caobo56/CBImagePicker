@@ -34,7 +34,7 @@
 -(void)startPicker{
     ABImagePicker * picker = [ABImagePicker shared];
     [picker startWithVC:self];
-    [picker setPickerCompletion:^(NSError *error, UIImage *image) {
+    [picker setPickerCompletion:^(ABImagePicker * picker, NSError *error, UIImage *image) {
         if (!error) {
             
         }else{

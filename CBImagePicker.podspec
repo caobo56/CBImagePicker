@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CBImagePicker"
-  s.version      = "0.9.2"
+  s.version      = "0.9.3"
   s.summary      = "caobo's imagePicker."
 
   # This description is used to generate tags and improve search results.
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/caobo56/CBImagePicker.git", :tag => "0.9.2" }
+  s.source       = { :git => "https://github.com/caobo56/CBImagePicker.git", :tag => "0.9.3" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
