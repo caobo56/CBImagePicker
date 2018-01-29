@@ -13,6 +13,7 @@
 /**
  选择器的回调
 
+ @param picker 当前picker对象
  @param error error
  @param image 图片
  */
