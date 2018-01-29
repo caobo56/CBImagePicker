@@ -3,6 +3,11 @@
 可以选择相册，也可以直接拍照
 
 ### 使用方法：
+使用pod 安装，也可以直接下载源码拖进工程
+```
+    pod 'CBImagePicker'
+```
+
 ```
 #import "ABImagePicker.h"
 ```
