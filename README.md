@@ -4,7 +4,7 @@
 
 ### 使用方法：
 ```
-###import "ABImagePicker.h"
+#import "ABImagePicker.h"
 ```
 ### 初始化ImagePicker
 ```
