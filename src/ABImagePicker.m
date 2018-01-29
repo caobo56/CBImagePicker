@@ -93,10 +93,10 @@ static ABImagePicker *imagePicker = nil;
     [picker dismissViewControllerAnimated:YES completion:^()
      {
          UIImage* image = info[UIImagePickerControllerEditedImage];
-         if (image.size.height/image.size.width !=1  )
-         {
-             image = [weakSelf imageScaleAspectFit:image toSize:CGSizeMake(kScaleHeadImageHeights, kScaleHeadImageHeights)];
-         }
+//          if (image.size.height/image.size.width !=1  )
+//          {
+//              image = [weakSelf imageScaleAspectFit:image toSize:CGSizeMake(kScaleHeadImageHeights, kScaleHeadImageHeights)];
+//          }
          _comp(nil,image);
      }];
 }
