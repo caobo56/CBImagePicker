@@ -16,7 +16,7 @@
 -(void)startPicker{
     ABImagePicker * picker = [ABImagePicker shared];
     [picker startWithVC:self];
-    [picker setPickerCompletion:^(NSError *error, UIImage *image) {
+    [picker setPickerCompletion:^(ABImagePicker * picker, NSError *error, UIImage *image) {
         if (!error) {
             //图片可用
             
@@ -29,40 +29,42 @@
 
 ### 接口列表：
 ```
-/**
-选择器的回调
 
-@param error error
-@param image 图片
-*/
-typedef void(^PickerCompletion)(NSError* error,UIImage* image);
+@class ABImagePicker;
+/**
+ 选择器的回调
+
+ @param picker 当前picker对象
+ @param error error
+ @param image 图片
+ */
+typedef void(^PickerCompletion)(ABImagePicker * picker,NSError* error,UIImage* image);
 
 @interface ABImagePicker : NSObject
 
 
 /**
-单例模式，可以直接获取对象
+ 单例模式，可以直接获取对象
 
-@return ABImagePicker
-*/
+ @return ABImagePicker
+ */
 +(instancetype)shared;
 
 
 /**
-设置当前选择器的VC
+ 设置当前选择器的VC
 
-@param vc 当前选择器的VC
-*/
+ @param vc 当前选择器的VC
+ */
 -(void)startWithVC:(UIViewController *)vc;
 
 
 /**
-选择器的回调
+ 选择器的回调
 
-@param comp 回调中有图片
-*/
+ @param comp 回调中有图片
+ */
 -(void)setPickerCompletion:(PickerCompletion)comp;
-
 
 @end
 ```
