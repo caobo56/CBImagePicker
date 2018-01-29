@@ -85,19 +85,21 @@ static ABImagePicker *imagePicker = nil;
 
 #pragma mark - UIImagePickerControllerDelegate
 
-
-
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     __weak typeof(self) weakSelf = self;
     [picker dismissViewControllerAnimated:YES completion:^()
      {
          UIImage* image = info[UIImagePickerControllerEditedImage];
-//          if (image.size.height/image.size.width !=1  )
-//          {
-//              image = [weakSelf imageScaleAspectFit:image toSize:CGSizeMake(kScaleHeadImageHeights, kScaleHeadImageHeights)];
-//          }
-         _comp(nil,image);
+//         if (image.size.height/image.size.width !=1  )
+//         {
+//             image = [weakSelf imageScaleAspectFit:image toSize:CGSizeMake(kScaleHeadImageHeights, kScaleHeadImageHeights)];
+//         }
+         dispatch_async(dispatch_get_main_queue(), ^{
+             if (_comp) {
+                 _comp(weakSelf,nil,image);
+             }
+         });
      }];
 }
 

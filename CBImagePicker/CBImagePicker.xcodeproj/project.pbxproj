@@ -15,7 +15,7 @@
 		A80D8E521FE92F69009486D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A80D8E511FE92F69009486D7 /* main.m */; };
 		A80D8E5C1FE92F69009486D7 /* CBImagePickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A80D8E5B1FE92F69009486D7 /* CBImagePickerTests.m */; };
 		A80D8E671FE92F69009486D7 /* CBImagePickerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A80D8E661FE92F69009486D7 /* CBImagePickerUITests.m */; };
-		A80D8E771FE92FC9009486D7 /* ABImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A80D8E751FE92FC9009486D7 /* ABImagePicker.m */; };
+		A8EA6475201EE18900512586 /* ABImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A8EA6473201EE18900512586 /* ABImagePicker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +52,8 @@
 		A80D8E621FE92F69009486D7 /* CBImagePickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CBImagePickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A80D8E661FE92F69009486D7 /* CBImagePickerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBImagePickerUITests.m; sourceTree = "<group>"; };
 		A80D8E681FE92F69009486D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A80D8E751FE92FC9009486D7 /* ABImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABImagePicker.m; sourceTree = "<group>"; };
-		A80D8E761FE92FC9009486D7 /* ABImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABImagePicker.h; sourceTree = "<group>"; };
+		A8EA6473201EE18900512586 /* ABImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABImagePicker.m; sourceTree = "<group>"; };
+		A8EA6474201EE18900512586 /* ABImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABImagePicker.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +104,7 @@
 		A80D8E411FE92F69009486D7 /* CBImagePicker */ = {
 			isa = PBXGroup;
 			children = (
-				A80D8E741FE92FC9009486D7 /* src */,
+				A8EA6472201EE18900512586 /* src */,
 				A80D8E421FE92F69009486D7 /* AppDelegate.h */,
 				A80D8E431FE92F69009486D7 /* AppDelegate.m */,
 				A80D8E451FE92F69009486D7 /* ViewController.h */,
@@ -136,13 +136,14 @@
 			path = CBImagePickerUITests;
 			sourceTree = "<group>";
 		};
-		A80D8E741FE92FC9009486D7 /* src */ = {
+		A8EA6472201EE18900512586 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				A80D8E761FE92FC9009486D7 /* ABImagePicker.h */,
-				A80D8E751FE92FC9009486D7 /* ABImagePicker.m */,
+				A8EA6473201EE18900512586 /* ABImagePicker.m */,
+				A8EA6474201EE18900512586 /* ABImagePicker.h */,
 			);
-			path = src;
+			name = src;
+			path = ../../src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,7 +281,7 @@
 			files = (
 				A80D8E471FE92F69009486D7 /* ViewController.m in Sources */,
 				A80D8E521FE92F69009486D7 /* main.m in Sources */,
-				A80D8E771FE92FC9009486D7 /* ABImagePicker.m in Sources */,
+				A8EA6475201EE18900512586 /* ABImagePicker.m in Sources */,
 				A80D8E441FE92F69009486D7 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
