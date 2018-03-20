@@ -12,10 +12,10 @@
 在Info.plist 文件中添加下面两项权限申请。
 ###### string 为项目的权限申请描述，写的不好，会被审核打回来的
 ```
-    <key>NSPhotoLibraryUsageDescription</key>
-	<string>相册权限</string>
-	<key>NSCameraUsageDescription</key>
-	<string>相机权限</string>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>相册权限</string>
+<key>NSCameraUsageDescription</key>
+<string>相机权限</string>
 ```
 
 ### 导入头文件
