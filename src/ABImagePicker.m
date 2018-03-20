@@ -64,6 +64,7 @@ static ABImagePicker *imagePicker = nil;
         UIImagePickerController *imagePicker = [UIImagePickerController new];
         imagePicker.allowsEditing = YES;
         imagePicker.delegate = self;
+        imagePicker.title  = @"拍照";
         imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
         imagePicker.mediaTypes = @[(NSString *) kUTTypeImage];
         [_vc presentViewController:imagePicker animated:YES completion:nil];
@@ -77,6 +78,7 @@ static ABImagePicker *imagePicker = nil;
         UIImagePickerController *imagePicker = [UIImagePickerController new];
         imagePicker.allowsEditing = YES;
         imagePicker.delegate = self;
+        imagePicker.title  = @"选择照片";
         imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         imagePicker.mediaTypes = @[(NSString *) kUTTypeImage];
         [_vc presentViewController:imagePicker animated:YES completion:nil];
@@ -90,11 +92,8 @@ static ABImagePicker *imagePicker = nil;
     __weak typeof(self) weakSelf = self;
     [picker dismissViewControllerAnimated:YES completion:^()
      {
-         UIImage* image = info[UIImagePickerControllerEditedImage];
-//         if (image.size.height/image.size.width !=1  )
-//         {
-//             image = [weakSelf imageScaleAspectFit:image toSize:CGSizeMake(kScaleHeadImageHeights, kScaleHeadImageHeights)];
-//         }
+         //此处选择为原始图片，若需要裁剪，可用 UIImagePickerControllerEditedImage
+         UIImage* image = info[UIImagePickerControllerOriginalImage];
          dispatch_async(dispatch_get_main_queue(), ^{
              if (_comp) {
                  _comp(weakSelf,nil,image);
@@ -104,9 +103,24 @@ static ABImagePicker *imagePicker = nil;
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
-{    
+{
+    __weak typeof(self) weakSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (_comp) {
+            NSString * description = @"";
+            if (picker.sourceType == UIImagePickerControllerSourceTypePhotoLibrary) {
+                description = @"用户已取消选择照片！";
+            }else{
+                description = @"用户已取消拍照！";
+            }
+            NSError * error = [[NSError alloc]initWithDomain:NSCocoaErrorDomain code:1 userInfo:@{@"description":description}];
+            _comp(weakSelf,error,nil);
+        }
+    });
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
+
+
 
 
 - (UIImage*)imageScaleAspectFit:(UIImage *)image toSize:(CGSize)se

@@ -10,6 +10,7 @@
 #import "ABImagePicker.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *imageV;
 
 @end
 
@@ -36,9 +37,9 @@
     [picker startWithVC:self];
     [picker setPickerCompletion:^(ABImagePicker * picker, NSError *error, UIImage *image) {
         if (!error) {
-            
+            _imageV.image = image;
         }else{
-
+            NSLog(@"error.description = %@",error.userInfo[@"description"]);
         }
     }];
 }

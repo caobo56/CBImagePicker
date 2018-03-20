@@ -139,8 +139,8 @@
 		A8EA6472201EE18900512586 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				A8EA6473201EE18900512586 /* ABImagePicker.m */,
 				A8EA6474201EE18900512586 /* ABImagePicker.h */,
+				A8EA6473201EE18900512586 /* ABImagePicker.m */,
 			);
 			name = src;
 			path = ../../src;
