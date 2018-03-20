@@ -7,9 +7,10 @@
 ```
     pod 'CBImagePicker'
 ```
-###设置权限申请
+
+### 设置权限申请
 在Info.plist 文件中添加下面两项权限申请。
-######string 为项目的权限申请描述，写的不好，会被审核打回来的
+###### string 为项目的权限申请描述，写的不好，会被审核打回来的
 ```
     <key>NSPhotoLibraryUsageDescription</key>
 	<string>相册权限</string>
