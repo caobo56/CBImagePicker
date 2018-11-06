@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "ABImagePicker.h"
+#import "CBImagePicker.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageV;
@@ -33,9 +33,9 @@
 
 
 -(void)startPicker{
-    ABImagePicker * picker = [ABImagePicker shared];
+    CBImagePicker * picker = [CBImagePicker shared];
     [picker startWithVC:self];
-    [picker setPickerCompletion:^(ABImagePicker * picker, NSError *error, UIImage *image) {
+    [picker setPickerCompletion:^(CBImagePicker * picker, NSError *error, UIImage *image) {
         if (!error) {
             _imageV.image = image;
         }else{

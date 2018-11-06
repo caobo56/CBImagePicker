@@ -1,32 +1,32 @@
 //
-//  ABImagePicker.m
+//  CBImagePicker.m
 //  ABCreditApp
 //
 //  Created by caobo56 on 2017/3/13.
 //  Copyright © 2017年 caobo56. All rights reserved.
 //
 
-#import "ABImagePicker.h"
+#import "CBImagePicker.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 
 const float kScaleHeadImageHeights = 500.0f;
 
-@interface ABImagePicker()<UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface CBImagePicker()<UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
 @property(nonatomic,weak)UIViewController * vc;
 @property(nonatomic,copy)PickerCompletion comp;
 @end
 
-static ABImagePicker *imagePicker = nil;
+static CBImagePicker *imagePicker = nil;
 
 
-@implementation ABImagePicker
+@implementation CBImagePicker
 
 +(instancetype)shared{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^ {
         if (!imagePicker) {
-            imagePicker = [ABImagePicker new];
+            imagePicker = [CBImagePicker new];
         }
     });
     return imagePicker;

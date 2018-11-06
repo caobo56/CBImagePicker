@@ -1,5 +1,5 @@
 //
-//  ABImagePicker.h
+//  CBImagePicker.h
 //  ABCreditApp
 //
 //  Created by caobo56 on 2017/3/13.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@class ABImagePicker;
+@class CBImagePicker;
 /**
  选择器的回调
 
@@ -17,15 +17,15 @@
  @param error error
  @param image 图片
  */
-typedef void(^PickerCompletion)(ABImagePicker * picker,NSError* error,UIImage* image);
+typedef void(^PickerCompletion)(CBImagePicker * picker,NSError* error,UIImage* image);
 
-@interface ABImagePicker : NSObject
+@interface CBImagePicker : NSObject
 
 
 /**
  单例模式，可以直接获取对象
 
- @return ABImagePicker
+ @return CBImagePicker
  */
 +(instancetype)shared;
 
